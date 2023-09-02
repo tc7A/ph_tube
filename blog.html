@@ -40,14 +40,14 @@
     </nav>
   </header>
   <main class="my-6">
-    <div class="flex">
-      <div class="w-[80%]">
+    <div class="flex flex-col lg:flex-row">
+      <div class="w-full lg:w-[80%]">
         <div id="scope" class="mb-16">
           <h1 class="text-4xl font-bold">Discussing the scope of var, let const</h1>
           <div>
-            <div class="flex gap-8 my-4">
+            <div class="flex flex-col lg:flex-row gap-8 my-4">
               <div class="">
-                <h3 cclass="text-center font-bold text-2xl bg-[#FF1F3D] rounded text-white">var</h3>
+                <h3 class="text-center font-bold text-2xl bg-[#FF1F3D] rounded text-white">var</h3>
                 <ul>
                   <li><b>Function Scope:</b> Variables declared with var are function-scoped, meaning they are only accessible within the function in which they are declared.</li>
                   <li><b>Hoisting:</b> Variables declared with var are hoisted to the top of their containing function or global scope. This means that you can use the variable before it is declared, but it will have an initial value of undefined.</li>
@@ -68,7 +68,7 @@
                 </div>
               </div>
             </div>
-            <div class="flex gap-8 my-4">
+            <div class="flex gap-8 my-4 flex-col-reverse lg:flex-row">
               <div class="">
                 <div class="bg-red-100 p-4 rounded-lg">
   <pre>
@@ -92,7 +92,7 @@
                 </ul>
               </div>
             </div>
-            <div class="flex gap-8 my-4">
+            <div class="flex gap-8 my-4 flex-col lg:flex-row">
               <div class="">
                 <h3 class="text-center font-bold text-2xl bg-[#FF1F3D] rounded text-white">const</h3>
                 <ul>
@@ -122,7 +122,7 @@
         </div>
         <div id="null_undefined" class="mb-16">
           <h1 class="text-4xl font-bold">The use cases of null and undefined</h1>
-          <div class="flex gap-8 mt-4">
+          <div class="flex gap-8 mt-4 flex-col lg:flex-row">
             <div class="flex-1">
               <h3 class="text-center font-bold text-2xl bg-[#FF1F3D] rounded text-white">null</h3>
               <ul>
@@ -148,7 +148,7 @@
           <p class="bg-red-100 p-4 rounded-lg">REST API, which stands for Representational State Transfer Application Programming Interface, is a set of architectural principles and constraints used for designing networked applications and web services. It is not a technology or a programming language but rather a style of building and interacting with web services. RESTful APIs are designed to be simple, scalable, and stateless, making them suitable for distributed systems, including the World Wide Web.</p>
         </div>
       </div>
-      <div class="w-[20%]">
+      <div class="w-full lg:w-[20%]">
         <ul class="px-2">
           <li><a class="text-underline" href="#scope">Discussing the scope of var, let, const</a></li>
           <li><a class="text-underline" href="#null_undefined">Use Cases of null and undefined</a></li>
