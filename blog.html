@@ -39,8 +39,123 @@
       <a href="./index.html" class="btn bg-[#FF1F3D] text-white">Home</a>
     </nav>
   </header>
-  <main>
+  <main class="my-6">
+    <div class="flex">
+      <div class="w-[80%]">
+        <div id="scope" class="mb-16">
+          <h1 class="text-4xl font-bold">Discussing the scope of var, let const</h1>
+          <div>
+            <div class="flex gap-8 my-4">
+              <div class="">
+                <h3 cclass="text-center font-bold text-2xl bg-[#FF1F3D] rounded text-white">var</h3>
+                <ul>
+                  <li><b>Function Scope:</b> Variables declared with var are function-scoped, meaning they are only accessible within the function in which they are declared.</li>
+                  <li><b>Hoisting:</b> Variables declared with var are hoisted to the top of their containing function or global scope. This means that you can use the variable before it is declared, but it will have an initial value of undefined.</li>
+                  <li><b>Re-declaration:</b> You can re-declare a var variable within the same scope without any error.</li>
+                </ul>
+              </div>
+              <div class="">
+                <div class="bg-red-100 p-4 rounded-lg">
+  <pre>
+    function exampleFunction() {
+      if (true) {
+          var x = 10;
+      }
+      console.log(x);
+      // 10 (accessible outside the if block)
+    }                
+  </pre>
+                </div>
+              </div>
+            </div>
+            <div class="flex gap-8 my-4">
+              <div class="">
+                <div class="bg-red-100 p-4 rounded-lg">
+  <pre>
+    function exampleFunction() {
+      if (true) {
+          let x = 10;
+      }
+      console.log(x);
+      // ReferenceError: x is not defined 
+      // (not accessible outside the if block)
+    }            
+  </pre>
+                </div>
+              </div>
+              <div class="">
+                <h3 class="text-center font-bold text-2xl bg-[#FF1F3D] rounded text-white">let</h3>
+                <ul>
+                  <li><b>Block Scope:</b> Variables declared with let are block-scoped, meaning they are accessible only within the block (enclosed by {}) where they are defined, such as a loop or conditional statement.</li>
+                  <li><b>Hoisting:</b> Like var, let variables are hoisted, but they are not initialized. Attempting to use a let variable before its declaration results in a ReferenceError</li>
+                  <li><b>No Re-declaration:</b> You cannot re-declare a let variable within the same scope.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="flex gap-8 my-4">
+              <div class="">
+                <h3 class="text-center font-bold text-2xl bg-[#FF1F3D] rounded text-white">const</h3>
+                <ul>
+                  <li><b>Block Scope:</b> Variables declared with const are also block-scoped, just like let.</li>
+                  <li><b>Hoisting:</b> Like let, const variables are hoisted but not initialized, and attempting to use a const variable before its declaration results in a ReferenceError.</li>
+                  <li><b>Immutable:</b> const variables cannot be reassigned after they are initialized. However, if a const variable holds an object or array, you can still modify the properties or elements of that object or array.</li>
+                </ul>
+              </div>
+              <div class="">
+                <div class="bg-red-100 p-4 rounded-lg">
+  <pre>
+    if (true) {
+      const y = 20;
+    }
+    console.log(y); 
+    // ReferenceError: y is not defined 
+    // (not accessible outside the if block)
     
+    const PI = 3.14159;
+    PI = 3.14; 
+    // TypeError: Assignment to constant variable.            
+  </pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="null_undefined" class="mb-16">
+          <h1 class="text-4xl font-bold">The use cases of null and undefined</h1>
+          <div class="flex gap-8 mt-4">
+            <div class="flex-1">
+              <h3 class="text-center font-bold text-2xl bg-[#FF1F3D] rounded text-white">null</h3>
+              <ul>
+                <li><b>Intentional Absence of Value: </b>null is typically used when you want to explicitly indicate that a variable or object property has no assigned value, but you intend for it to have no value.</li>
+                <li><b>Clear Initialization: </b>It can be used when initializing variables or properties to prepare them for later assignment.</li>
+                <li><b>As a Placeholder: </b>In some cases, null is used as a placeholder for an object or value that will be assigned or created later.</li>
+                <li><b>Checking for Missing Values: </b>You can use null when checking for the absence of a value in conditional statements.</li>
+              </ul>
+            </div>
+            <div class="flex-1">
+              <h3 class="text-center font-bold text-2xl bg-[#FF1F3D] rounded text-white">undefined</h3>
+              <ul>
+                <li><b>Implicit Absence of Value:</b> Usually indicates that a variable or object property has been declared but has not been assigned any value yet. It is often used as the default initial value for variables.</li>
+                <li><b>Function Parameters:</b> When a function is called with fewer arguments than declared parameters, the extra parameters are undefined.</li>
+                <li><b>Object Properties:</b> If you try to access an object property that doesn't exist, JavaScript returns undefined.</li>
+                <li><b>Uninitialized Variables:</b> Variables declared but not explicitly assigned are automatically initialized to undefined.</li>
+            </ul>
+            </div>
+          </div>
+        </div>
+        <div id="rest_api">
+          <h1 class="text-4xl font-bold">What do you mean by REST API?</h1>
+          <p class="bg-red-100 p-4 rounded-lg">REST API, which stands for Representational State Transfer Application Programming Interface, is a set of architectural principles and constraints used for designing networked applications and web services. It is not a technology or a programming language but rather a style of building and interacting with web services. RESTful APIs are designed to be simple, scalable, and stateless, making them suitable for distributed systems, including the World Wide Web.</p>
+        </div>
+      </div>
+      <div class="w-[20%]">
+        <ul class="px-2">
+          <li><a class="text-underline" href="#scope">Discussing the scope of var, let, const</a></li>
+          <li><a class="text-underline" href="#null_undefined">Use Cases of null and undefined</a></li>
+          <li><a class="text-underline" href="#rest_api">What do you mean by rest api</a></li>
+        </ul>
+      </div>
+    </div>
   </main>
   <footer></footer>
 </body>
