@@ -68,12 +68,11 @@ const showData = async (category_id) => {
     }
   })
 
-
   dataContainer.innerHTML = "";
   if(category_item.length>0){
     category_item.forEach((item) => {
       dataContainer.innerHTML += `
-      <div class='w-[22.6%] mx-4 my-6'>
+      <div class='w-full md:w-[44%] lg:w-[22.6%] mx-4 my-6'>
         <div class="relative h-64">
           <img class='h-full w-full rounded-lg' src=${item.thumbnail} >
           ${item.others.posted_date?`
